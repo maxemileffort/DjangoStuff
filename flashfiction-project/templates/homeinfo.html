@@ -17,8 +17,12 @@
     </section>
     
     <section role="region">
-        <textarea name="story" id="editor" cols="50" rows="15"></textarea>
-        <input type="submit" value="Save">
+        <form action="{% url 'dashboard' %}">
+            <textarea name="story" id="editor" cols="50" rows="15"></textarea>
+            <br>
+            <input type="submit" value="Save">
+        </form>
+        
     </section>
 
     <footer role="contentinfo">
