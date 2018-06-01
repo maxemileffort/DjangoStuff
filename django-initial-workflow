@@ -1,0 +1,24 @@
+1. install python
+//silently installs a default, system-wide Python installation (from an elevated command prompt):
+python-3.6.0.exe /quiet InstallAllUsers=1 PrependPath=1 Include_test=0
+
+
+2. install virtual environment scripts:
+on windows:
+	pip install virtualenvwrapper-win
+on mac/linux:
+	pip install virtualenvwrapper
+
+3. create virtual env
+cd <into project directory>
+mkvirtualenv <envname>
+	use 'workon <envname>'' to switch between envs
+
+4. install django: 
+make sure we are in virtual env:
+	cmd line should start with (envname) C:blah blah
+pip install django
+
+5. start django project: 
+django-admin startproject <projectname>
+cd into <new projectname dir>

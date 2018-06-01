@@ -1,0 +1,42 @@
+1. Make sure we are in virtual env
+cd <into project directory>
+mkvirtualenv <envname>
+	use 'workon <envname>'' to switch between envs
+
+2. initiate django app
+python manage.py startapp <appname>
+in settings.py in <projectname> directory:
+	add <appname> to installed apps list
+
+### Note about where to put app in file structure###
+Your apps can live anywhere on your Python path. In this tutorial, we’ll create our poll app right next to your manage.py file 
+so that it can be imported as its own top-level module, rather than a submodule of mysite.
+
+To create your app, make sure you’re in the same directory as manage.py and type "startapp" command.
+###
+
+3. routing app
+in <appname> directory:
+	create urls.py file
+	add following code:
+		from django.urls import path
+
+		from . import views
+
+		urlpatterns = [
+    		path('', views.<appname>, name='<appname>'),
+		]
+in <projectname> directory:
+	import include, path
+	add to urlpatterns list:
+		path('<desired route>', include('<appname>.urls')), <--punctuation significant
+
+4. templating app
+	in top(project) directory:
+		create templates folder
+		add html files for templating
+		go to settings.py in <projectname> directory
+			scoll down to TEMPLATES and add 'templates' to DIRS list
+
+
+
