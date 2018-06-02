@@ -13,7 +13,15 @@
         <h1>Flash Fiction - Dashboard</h1>
     </header>
 
+    <section id="recent-fictions" role="region"></section>
+    <section id="recent-abridges" role="region"></section>
 
+    <section id="buttons" role="region">
+        <a href="{% url 'editor'  %}"><button>Flash Fiction</button></a>
+        <a href="{% url 'abridge'  %}"><button>Abridge</button></a>
+        <a href="{% url 'homeinfo'  %}"><button>Log Out</button></a>
+
+    </section>
 
     <footer role="contentinfo">
 

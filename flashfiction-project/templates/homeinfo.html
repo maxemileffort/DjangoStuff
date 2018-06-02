@@ -9,22 +9,14 @@
 <body>
     <header role="banner">
         <h1>Flash Fiction</h1>
+        <p>{% lorem 1 %}</p>
     </header>
     
     <section role="region">
-        <button>Register</button>
-        <button>Sign In</button>
+        <a href="{% url 'register'  %}"><button>Register</button></a>
+        <a href="{% url 'login'  %}"><button>Log In</button></a>
     </section>
     
-    <section role="region">
-        <form action="{% url 'dashboard' %}">
-            <textarea name="story" id="editor" cols="50" rows="15"></textarea>
-            <br>
-            <input type="submit" value="Save">
-        </form>
-        
-    </section>
-
     <footer role="contentinfo">
 
     </footer>

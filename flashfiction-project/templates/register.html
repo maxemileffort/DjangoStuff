@@ -12,7 +12,17 @@
     <header role="banner">
         <h1>Flash Fiction - Register</h1>
     </header>
-
+    <section>
+        <form action="{% url 'dashboard' %}" method="POST">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="reg-email">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="reg-pass">
+            <label for="password">Confirm Password</label>
+            <input type="password" name="confirm-password" id="reg-conf-pass">
+            <input type="submit" value="Register">
+        </form>
+    </section>
 
 
     <footer role="contentinfo">

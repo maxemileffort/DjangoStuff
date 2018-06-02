@@ -20,7 +20,7 @@ urlpatterns = [
     path('', include('homeinfo.urls')),
     path('editor/', include('editor.urls')),
     path('dashboard/', include('dashboard.urls')),
-    path('register/', include('register.urls')),
-    path('login/', include('login.urls')),
+    path('accounts/', include('accounts.urls')),
+    path('abridge/', include('abridge.urls')),
     path('admin/', admin.site.urls),
 ]
