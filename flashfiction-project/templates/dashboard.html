@@ -1,31 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %} 
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Flash Fiction | 100 word short story editor</title>
-</head>
+{% block content %}
 
-<body>
-    <header role="banner">
-        <h1>Flash Fiction - Dashboard</h1>
-    </header>
+<h1>Dashboard</h1>
 
-    <section id="recent-fictions" role="region"></section>
+    <section id="recent-fictions" role="region">
+    </section>
     <section id="recent-abridges" role="region"></section>
 
     <section id="buttons" role="region">
-        <a href="{% url 'editor'  %}"><button>Flash Fiction</button></a>
-        <a href="{% url 'abridge'  %}"><button>Abridge</button></a>
-        <a href="{% url 'homeinfo'  %}"><button>Log Out</button></a>
+        <a href="{% url 'editor'  %}">
+            <button>Flash Fiction</button>
+        </a>
+        <a href="{% url 'abridge'  %}">
+            <button>Abridge</button>
+        </a>
+        <a href="{% url 'homeinfo'  %}">
+            <button>Log Out</button>
+        </a>
 
     </section>
 
-    <footer role="contentinfo">
+{% endblock %}
 
-    </footer>
-</body>
 
-</html>

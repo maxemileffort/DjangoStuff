@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flash Fiction | 100 word short story editor</title>
+</head>
+
+<body>
+    <header role="banner">
+        <h1>Flash Fiction</h1>
+        {% if user.is_authenticated %}
+        <a href="javascript:{document.getElementById('logout').submit()}">Logout</a>
+        <form id="logout" action="{% url 'logout' %}" method="post">
+            {% csrf_token %}
+            <input type="hidden">
+        </form>
+        {% else %}
+        <a href="{% url 'register' %}">Register</a>
+        <a href="{% url 'login' %}">Login</a>
+        {% endif %}
+        
+    </header>
+
+    {% block content %}
+    {% endblock %}
+
+    
+
+
+    <footer role="contentinfo">
+
+    </footer>
+</body>
+
+</html>

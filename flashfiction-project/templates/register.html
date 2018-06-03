@@ -1,33 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %} 
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Flash Fiction | 100 word short story editor</title>
-</head>
+{% block content %} 
 
-<body>
-    <header role="banner">
-        <h1>Flash Fiction - Register</h1>
-    </header>
-    <section>
-        <form action="{% url 'dashboard' %}" method="POST">
-            <label for="email">Email</label>
-            <input type="email" name="email" id="reg-email">
-            <label for="password">Password</label>
-            <input type="password" name="password" id="reg-pass">
-            <label for="password">Confirm Password</label>
-            <input type="password" name="confirm-password" id="reg-conf-pass">
+{% if error %}
+{{ error }}
+<br>
+<br>
+{% endif %}
+
+<h1>Register</h1>
+
+    <section role="region">
+        <form action="{% url 'register' %}" method="POST">
+            {%csrf_token%}
+            <label for="username">Username</label>
+            <br>
+            <input type="username" name="username" id="reg-username">
+            <br>
+            <label for="password1">Password</label>
+            <br>
+            <input type="password" name="password1" id="reg-pass">
+            <br>
+            <label for="password2">Confirm Password</label>
+            <br>
+            <input type="password" name="password2" id="reg-conf-pass">
+            <br>
+            <br>
             <input type="submit" value="Register">
         </form>
     </section>
 
-
-    <footer role="contentinfo">
-
-    </footer>
-</body>
-
-</html>
+{% endblock %}
+    

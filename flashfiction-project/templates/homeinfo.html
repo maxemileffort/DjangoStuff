@@ -1,24 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Flash Fiction | 100 word short story editor</title>
-</head>
-<body>
-    <header role="banner">
-        <h1>Flash Fiction</h1>
-        <p>{% lorem 1 %}</p>
-    </header>
-    
-    <section role="region">
-        <a href="{% url 'register'  %}"><button>Register</button></a>
-        <a href="{% url 'login'  %}"><button>Log In</button></a>
-    </section>
-    
-    <footer role="contentinfo">
+{% extends 'base.html' %}
 
-    </footer>
-</body>
-</html>
+{% block content %} 
+
+<section role="region">
+    Welcome to Flash Fiction!
+</section>
+
+{% endblock %}
+    
+    
+    

@@ -1,30 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Flash Fiction | 100 word short story editor</title>
-</head>
+{% extends 'base.html' %}
 
-<body>
-    <header role="banner">
-        <h1>Flash Fiction - Login</h1>
-    </header>
-    <section>
-        <form action="{% url 'dashboard' %}" method="POST">
-            <label for="email">Email</label>
-            <input type="email" name="email" id="">
-            <label for="password">Password</label>
-            <input type="password" name="password" id="">
-            <input type="submit" value="Log In">
-        </form>
-    </section>
+{% block content %}
 
-    <footer role="contentinfo">
+{% if error %}
+{{ error }}
+{% endif %}
+<h1>Log In</h1>
 
-    </footer>
-</body>
+<section>
+    <form action="{% url 'login' %}" method="POST">
+        {% csrf_token %}
+        <label for="username">Username</label>
+        <br>
+        <input type="username" name="username" id="">
+        <br>
+        <label for="password">Password</label>
+        <br>
+        <input type="password" name="password" id="">
+        <br>
+        <br>
+        <input type="submit" value="Log In">
+    </form>
+</section>
 
-</html>
+{% endblock %}
+    

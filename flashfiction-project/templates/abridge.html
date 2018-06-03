@@ -1,22 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Flash Fiction | 100 word short story editor</title>
-</head>
 
-<body>
-    <header role="banner">
-        <h1>Flash Fiction - Abridge</h1>
-    </header>
 
-    <section role="region">
-        <button><a href="{% url 'dashboard' %}">My fictions</a></button>
-        <button><a href="{% url 'homeinfo' %}">Log Out</a></button>
-    </section>
+{% extends 'base.html' %}
+
+{% block content %} 
+
+<h1>Abridge</h1>
 
     <section role="region">
         <br>
@@ -39,9 +28,6 @@
         <textarea name="short" id="editor" cols="50" rows="15"></textarea>
     </section>
 
-    <footer role="contentinfo">
+{% endblock %}
 
-    </footer>
-</body>
 
-</html>
